@@ -10,7 +10,6 @@ export default function ScrollToTop() {
       left: 0,
       behavior: "smooth",
     });
-
   }, [pathname, search]);
 
   return null;

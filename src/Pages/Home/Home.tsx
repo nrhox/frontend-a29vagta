@@ -1,29 +1,25 @@
-import { memo, useContext } from "react";
+import { memo } from "react";
 import { NameIndexPage, TabTitle } from "../../lib/Lib";
-import { AppContext } from "../../lib/context/app-context";
-import SectionAjakan from "./SectionAjakan/SectionAjakan";
-import SectionPost from "./SectionPost/SectionPost";
-import SectionWelcome from "./SectionWelcome/SectionWelcome";
-import "./home.css";
+import SectionAjakan from "./SectionAjakan";
+import SectionPost from "./SectionPost";
+import SectionWelcome from "./SectionWelcome";
 
 function Home() {
-  const context = useContext(AppContext);
-  const { GetLatestPost } = context.latest_post;
   TabTitle(NameIndexPage);
 
   return (
-    <>
+    <div className="relative">
       <div className="bg-hero"></div>
-      <div className="z-[1] absolute top-0 left-0">
+      <div className="absolute top-0 z-1 w-full">
         <SectionWelcome />
       </div>
-      <div className="paralax-h-full bg-white dark:bg-gray-900 pt-5 pb-10">
-        <div className="md:mx-4 mt-3 h-full mb-8">
-          <SectionPost GetLatestPost={GetLatestPost} />
+      <div className="bg-white pt-5 pb-10 dark:bg-gray-900">
+        <div className="mt-3 mb-8 h-full md:mx-4">
+          <SectionPost />
         </div>
         <SectionAjakan />
       </div>
-    </>
+    </div>
   );
 }
 

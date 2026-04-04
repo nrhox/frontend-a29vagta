@@ -2,86 +2,324 @@ import { SVGAttributes } from "react";
 
 function IconFlower(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="#000000" {...props}>
+    <svg
+      viewBox="0 0 100 100"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="#000000"
+      {...props}
+    >
       <defs>
         <circle id="a" cx="50" cy="50" r="50" />
       </defs>
       <g clipPath="url(#b)">
-        <path fill="#25AE5F" d="M72.964 65.034s-6.233-2.373-8.61 0l-3.588 3.58a6.062 6.062 0 0 0-.729 7.702L52 83.777V55h-4v66h4V86.508l9.432-8.758c2.385 1.789 5.774 1.623 7.944-.543l3.588-3.58c2.378-2.373 0-8.593 0-8.593z" />
+        <path
+          fill="#25AE5F"
+          d="M72.964 65.034s-6.233-2.373-8.61 0l-3.588 3.58a6.062 6.062 0 0 0-.729 7.702L52 83.777V55h-4v66h4V86.508l9.432-8.758c2.385 1.789 5.774 1.623 7.944-.543l3.588-3.58c2.378-2.373 0-8.593 0-8.593z"
+        />
         <path fill="#C03A2B" d="M30 33h20L40 21 30 33zm30-12L50 33h20L60 21z" />
-        <path fill="#1F8B4D" d="M48 57h4v4h-4v-4zm16.354 8.034l-3.588 3.58a6.062 6.062 0 0 0-.729 7.702l-.018.016.844.803 12.101-12.101s-6.234-2.373-8.61 0z" />
-        <path fill="#E64B3C" d="M70 21v17c0 11.046-8.954 20-20 20s-20-8.954-20-20V21l9.958 10 10.018-10 9.965 10L70 21z" />
-        <path fill="#EB675A" d="M50 21.023V58c11.046 0 20-8.954 20-20V21L59.941 31 50 21.023z" />
+        <path
+          fill="#1F8B4D"
+          d="M48 57h4v4h-4v-4zm16.354 8.034l-3.588 3.58a6.062 6.062 0 0 0-.729 7.702l-.018.016.844.803 12.101-12.101s-6.234-2.373-8.61 0z"
+        />
+        <path
+          fill="#E64B3C"
+          d="M70 21v17c0 11.046-8.954 20-20 20s-20-8.954-20-20V21l9.958 10 10.018-10 9.965 10L70 21z"
+        />
+        <path
+          fill="#EB675A"
+          d="M50 21.023V58c11.046 0 20-8.954 20-20V21L59.941 31 50 21.023z"
+        />
       </g>
     </svg>
   );
 }
 
 /**
- * @param {React.SVGProps<SVGSVGElement>} props 
+ * @param {React.SVGProps<SVGSVGElement>} props
  * @returns {React.JSX.Element}
  */
 
 function IconEagle(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" {...props}>
-      <path fill="#292F33" d="M7.042 26c.33 0 .651.121.963.331c1.368-8.106 20.362-8.248 21.755-.29c1.666.412 3.08 4.378 3.748 9.959h-31c.793-5.899 2.522-10 4.534-10z" />
-      <path fill="#E1E8ED" d="M7.043 23.688C10.966 12.533 6.508 3 17.508 3s8.736 8.173 13.193 19.125c1.119 2.75-1.443 5.908-1.443 5.908s-2.612-4.756-4.75-5.846c-.591 3.277-1.75 6.938-1.75 6.938s-2.581-2.965-5.587-5.587c-.879 1.009-2.065 2.183-3.663 3.462c-.349-1.048-.943-2.339-1.568-3.576c-1.468 2.238-3.182 4.951-3.182 4.951s-2.507-2.435-1.715-4.687z" />
-      <path fill="#FFCC4D" d="M11.507 5c-4.36 3.059-5.542 2.16-7.812 3.562c-2.125 1.312-2 4.938-.125 8.062c.579-2.661-.5-3.149 6.938-3.149c5 0 7.928.289 7-1c-.927-1.289-10.027.459-6.001-7.475z" />
-      <path fill="#292F33" d="M16.535 7.517a1.483 1.483 0 1 1-2.967 0c0-.157.031-.305.076-.446h2.816c.044.141.075.289.075.446z" />
+    <svg
+      viewBox="0 0 36 36"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+      preserveAspectRatio="xMidYMid meet"
+      {...props}
+    >
+      <path
+        fill="#292F33"
+        d="M7.042 26c.33 0 .651.121.963.331c1.368-8.106 20.362-8.248 21.755-.29c1.666.412 3.08 4.378 3.748 9.959h-31c.793-5.899 2.522-10 4.534-10z"
+      />
+      <path
+        fill="#E1E8ED"
+        d="M7.043 23.688C10.966 12.533 6.508 3 17.508 3s8.736 8.173 13.193 19.125c1.119 2.75-1.443 5.908-1.443 5.908s-2.612-4.756-4.75-5.846c-.591 3.277-1.75 6.938-1.75 6.938s-2.581-2.965-5.587-5.587c-.879 1.009-2.065 2.183-3.663 3.462c-.349-1.048-.943-2.339-1.568-3.576c-1.468 2.238-3.182 4.951-3.182 4.951s-2.507-2.435-1.715-4.687z"
+      />
+      <path
+        fill="#FFCC4D"
+        d="M11.507 5c-4.36 3.059-5.542 2.16-7.812 3.562c-2.125 1.312-2 4.938-.125 8.062c.579-2.661-.5-3.149 6.938-3.149c5 0 7.928.289 7-1c-.927-1.289-10.027.459-6.001-7.475z"
+      />
+      <path
+        fill="#292F33"
+        d="M16.535 7.517a1.483 1.483 0 1 1-2.967 0c0-.157.031-.305.076-.446h2.816c.044.141.075.289.075.446z"
+      />
     </svg>
   );
 }
 
 function IconSchool(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" viewBox="0 0 508 508" {...props}>
-      <rect x="90.8" y="220.8" style={{ fill: "#E6E9EE" }} width="326.4" height="204.8" />
-      <path style={{ fill: "#324A5E" }} d="M425.2,194.4H82.8c-2,0-3.2,1.6-3.2,3.2v19.6c0,2,1.6,3.2,3.2,3.2h342.4c2,0,3.2-1.6,3.2-3.2v-19.6  C428.4,196,426.8,194.4,425.2,194.4z" />
-      <polygon style={{ fill: "#FFFFFF" }} points="338,153.6 338,425.6 170,425.6 170,153.6 254,112.8 " />
-      <path style={{ fill: "#324A5E" }} d="M351.6,168.8c-1.2,0-2.4-0.4-4-0.8L254,122.4L160,168c-4.4,2-9.6,0.4-11.6-4s-0.4-9.6,4-11.6  l97.6-47.6c2.4-1.2,5.2-1.2,7.6,0l97.6,47.2c4.4,2,6.4,7.2,4,11.6C358,167.2,354.8,168.8,351.6,168.8z" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      id="Layer_1"
+      viewBox="0 0 508 508"
+      {...props}
+    >
+      <rect
+        x="90.8"
+        y="220.8"
+        style={{ fill: "#E6E9EE" }}
+        width="326.4"
+        height="204.8"
+      />
+      <path
+        style={{ fill: "#324A5E" }}
+        d="M425.2,194.4H82.8c-2,0-3.2,1.6-3.2,3.2v19.6c0,2,1.6,3.2,3.2,3.2h342.4c2,0,3.2-1.6,3.2-3.2v-19.6  C428.4,196,426.8,194.4,425.2,194.4z"
+      />
+      <polygon
+        style={{ fill: "#FFFFFF" }}
+        points="338,153.6 338,425.6 170,425.6 170,153.6 254,112.8 "
+      />
+      <path
+        style={{ fill: "#324A5E" }}
+        d="M351.6,168.8c-1.2,0-2.4-0.4-4-0.8L254,122.4L160,168c-4.4,2-9.6,0.4-11.6-4s-0.4-9.6,4-11.6  l97.6-47.6c2.4-1.2,5.2-1.2,7.6,0l97.6,47.2c4.4,2,6.4,7.2,4,11.6C358,167.2,354.8,168.8,351.6,168.8z"
+      />
       <g>
-        <rect x="186" y="168.8" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="223.6" y="168.8" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="260.8" y="168.8" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="298" y="168.8" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="186" y="214" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="223.6" y="214" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="260.8" y="214" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="298" y="214" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="186" y="259.2" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="223.6" y="259.2" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="260.8" y="259.2" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="298" y="259.2" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="186" y="304" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="223.6" y="304" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="260.8" y="304" style={{ fill: "#84DBFF" }} width="24" height="24" />
-        <rect x="298" y="304" style={{ fill: "#84DBFF" }} width="24" height="24" />
+        <rect
+          x="186"
+          y="168.8"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="223.6"
+          y="168.8"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="260.8"
+          y="168.8"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="298"
+          y="168.8"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="186"
+          y="214"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="223.6"
+          y="214"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="260.8"
+          y="214"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="298"
+          y="214"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="186"
+          y="259.2"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="223.6"
+          y="259.2"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="260.8"
+          y="259.2"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="298"
+          y="259.2"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="186"
+          y="304"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="223.6"
+          y="304"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="260.8"
+          y="304"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="298"
+          y="304"
+          style={{ fill: "#84DBFF" }}
+          width="24"
+          height="24"
+        />
       </g>
       <g>
-        <rect x="346.8" y="238" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="384" y="238" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="346.8" y="276.8" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="384" y="276.8" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="346.8" y="316" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="384" y="316" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="100.4" y="238" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="137.6" y="238" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="100.4" y="276.8" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="137.6" y="276.8" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="100.4" y="316" style={{ fill: "#54C0EB" }} width="24" height="24" />
-        <rect x="137.6" y="316" style={{ fill: "#54C0EB" }} width="24" height="24" />
+        <rect
+          x="346.8"
+          y="238"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="384"
+          y="238"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="346.8"
+          y="276.8"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="384"
+          y="276.8"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="346.8"
+          y="316"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="384"
+          y="316"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="100.4"
+          y="238"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="137.6"
+          y="238"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="100.4"
+          y="276.8"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="137.6"
+          y="276.8"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="100.4"
+          y="316"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
+        <rect
+          x="137.6"
+          y="316"
+          style={{ fill: "#54C0EB" }}
+          width="24"
+          height="24"
+        />
       </g>
-      <rect x="230.8" y="371.2" style={{ fill: "#324A5E" }} width="46.4" height="54.4" />
+      <rect
+        x="230.8"
+        y="371.2"
+        style={{ fill: "#324A5E" }}
+        width="46.4"
+        height="54.4"
+      />
     </svg>
   );
 }
 
 function IconLion(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg {...props} version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+    <svg
+      {...props}
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      fill="currentColor"
+    >
       <g>
-        <path d="M489.814,298.597c-20.668-24.111-43.333-24.982-59.433-24.982c-17.548,0-34.995,5.496-49.128,15.476
+        <path
+          d="M489.814,298.597c-20.668-24.111-43.333-24.982-59.433-24.982c-17.548,0-34.995,5.496-49.128,15.476
 		l-0.369,0.266h-87.719l-0.345-2.818c0.126-0.028,12.031-3.075,21.569-11.696c-21.402-10.036-39.497-46.52-40.281-48.117
 		l-1.235-2.518l2.762,0.482c5.95,1.039,14.964,2.56,18.968,3.138c-8.404-29.405-23.528-47.175-23.682-47.356l-1.925-2.232
 		l20.267-0.879c-19.26-40.04-54.806-58.997-55.168-59.192l-3.051-1.597l3.288-1.026c0.122-0.041,11.805-3.752,19.962-10.266
@@ -97,7 +335,8 @@ function IconLion(props: SVGAttributes<SVGSVGElement>) {
 		c5.778-4.924,12.795-8.914,20.847-11.844c11.835-4.324,26.241-6.52,42.816-6.52h42.579v-18.622h16.408v35.026H376.88
 		c-16.31,0-29.92,2.288-40.445,6.808c-8.317,3.577-14.538,8.369-19.012,14.632c-2.354,3.326-4.171,7.058-5.401,11.103
 		c-1.604,5.266-1.936,10.211-1.932,13.433c-0.004,1.011,0.028,1.946,0.076,2.783H512v-49.393
-		C512,380.394,511.24,323.594,489.814,298.597z"/>
+		C512,380.394,511.24,323.594,489.814,298.597z"
+        />
       </g>
     </svg>
   );
@@ -105,15 +344,32 @@ function IconLion(props: SVGAttributes<SVGSVGElement>) {
 
 function IconDev(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+      />
     </svg>
   );
 }
 
 function IconNote(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" {...props} fill="currentColor" version="1.1" viewBox="0 0 345.369 345.369">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+      fill="currentColor"
+      version="1.1"
+      viewBox="0 0 345.369 345.369"
+    >
       <g>
         <path d="M199.654,105.629H49.965c-4.143,0-7.5-3.357-7.5-7.5s3.357-7.5,7.5-7.5h149.689c4.142,0,7.5,3.357,7.5,7.5S203.796,105.629,199.654,105.629z" />
       </g>
@@ -133,11 +389,23 @@ function IconNote(props: SVGAttributes<SVGSVGElement>) {
 
 function IconBank(props: SVGAttributes<SVGSVGElement>) {
   return (
-    <svg fill="currentColor" viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      fill="currentColor"
+      viewBox="-1.5 0 19 19"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <path d="M15.442 14.75v.491H.558v-.49a.476.476 0 0 1 .475-.476h.478a.487.487 0 0 1-.003-.048v-.443a.476.476 0 0 1 .475-.475h.713V7.164H1.508a.554.554 0 0 1-.22-1.063L7.78 3.288a.554.554 0 0 1 .44 0L14.712 6.1a.554.554 0 0 1-.22 1.063h-1.188v6.145h.713a.476.476 0 0 1 .475.475v.443a.443.443 0 0 1-.003.048h.478a.476.476 0 0 1 .475.475zM3.804 13.31h2.058V8.264H3.804zm.377-7.254h7.639L8 4.4zm2.79 2.21v5.043h2.058V8.265zm5.225 5.043V8.265h-2.059v5.044z" />
     </svg>
   );
 }
 
-export { IconBank, IconDev, IconEagle, IconFlower, IconLion, IconNote, IconSchool };
-
+export {
+  IconBank,
+  IconDev,
+  IconEagle,
+  IconFlower,
+  IconLion,
+  IconNote,
+  IconSchool,
+};

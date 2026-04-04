@@ -1,8 +1,9 @@
-import { DetailedHTMLProps, HTMLAttributes, MouseEvent, MouseEventHandler, memo } from "react";
+import { MouseEvent, MouseEventHandler, memo } from "react";
 import { useNavigate } from "react-router-dom";
-import { LazyImage, LocaleFormatIndonesia, timeSince } from "../../lib/Lib";
+import { LocaleFormatIndonesia, timeSince } from "../../lib/Lib";
+import LazyImage from "../Base/LazyImage";
 
-interface iCardLinkProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+interface iCardLinkProps {
   to: string;
   thumbnail: string;
   title: string;
@@ -10,7 +11,14 @@ interface iCardLinkProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement
   onClick?: MouseEventHandler;
 }
 
-function CardLink({ to, thumbnail, title, date, onClick, ...props }: iCardLinkProps) {
+function CardLink({
+  to,
+  thumbnail,
+  title,
+  date,
+  onClick,
+  ...props
+}: iCardLinkProps) {
   const navigate = useNavigate();
   const lengthJudul = title.length >= 60;
 
@@ -24,15 +32,27 @@ function CardLink({ to, thumbnail, title, date, onClick, ...props }: iCardLinkPr
 
   return (
     <div {...props}>
-      <div onClick={(e) => handlerClick(e)} className="select-none md:max-w-sm flex font-sans flex-col relative md:my-4 mb-3 transition-all duration-150 active:opacity-80 bg-white border bg-opacity-40 border-gray-200 md:bg-transparent md:border-transparent md:dark:bg-transparent md:dark:border-transparent dark:bg-gray-800 dark:bg-opacity-40 dark:border-gray-700">
+      <div
+        onClick={(e) => handlerClick(e)}
+        className="bg-opacity-40 dark:bg-opacity-40 relative mb-3 flex flex-col border border-gray-200 bg-white font-sans transition-all duration-150 select-none active:opacity-80 md:my-4 md:max-w-sm md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800 md:dark:border-transparent md:dark:bg-transparent"
+      >
         <LazyImage className="md:rounded-lg">
-          <img className="md:rounded-lg" src={thumbnail} alt={title} onContextMenu={(e) => e.preventDefault()} />
+          <img
+            className="md:rounded-lg"
+            src={thumbnail}
+            alt={title}
+            onContextMenu={(e) => e.preventDefault()}
+          />
         </LazyImage>
         <div className="p-4 py-5 pt-3 sm:p-5 md:px-5 md:py-5 md:pt-3">
-          <h5 className="text-lg mb-1 sm:text-xl font-[500] tracking-normal text-gray-900 dark:text-white">
+          <h5 className="mb-1 text-lg font-medium tracking-normal text-gray-900 sm:text-xl dark:text-white">
             {lengthJudul ? title.substring(0, 43) + "..." : title}
           </h5>
-          <span className="block font-normal text-sm text-gray-700 dark:text-gray-300">{timeSince(date) + " • " + LocaleFormatIndonesia(date)?.TanggalNotHari}</span>
+          <span className="block text-sm font-normal text-gray-700 dark:text-gray-300">
+            {timeSince(date) +
+              " • " +
+              LocaleFormatIndonesia(date)?.TanggalNotHari}
+          </span>
         </div>
       </div>
     </div>
