@@ -1,17 +1,36 @@
-import { useContext } from "react";
-import { AppContext } from "../../lib/context/app-context";
+import { useQuery } from "@tanstack/react-query";
+import { LoadingSpiner } from "../../components/Base/Loading";
+import { axiosInstance } from "../../lib/axiosInstance";
+import type {
+  IResponsePagination,
+  ISuccessResponse,
+} from "../../types/response";
+import type { IVideo } from "../../types/vagta";
 import SideVideo from "./SideVideo";
 
-export default function AllVideo({ id }: { id: string; }) {
-  const context = useContext(AppContext);
-  const { GetVideo } = context.video;
+export default function AllVideo({ id }: { id: string }) {
+  const { isLoading, isError, data } = useQuery({
+    queryKey: ["side_video_" + id],
+    queryFn: async () => {
+      const result = await axiosInstance.get<
+        ISuccessResponse<IResponsePagination<IVideo>>
+      >("/vagta/video", {
+        params: {
+          limit: 100,
+          not: id,
+        },
+      });
+      return result.data.data.data;
+    },
+  });
 
-  return (
-    GetVideo.map((idx: any, i: number) => {
-      if (idx.id_build !== id) {
-        return <SideVideo thisVideo={idx} key={i} />;
-      }
-      return null;
-    })
-  );
+  if (isError) {
+    return null;
+  }
+
+  if (isLoading) {
+    return <LoadingSpiner />;
+  }
+
+  return data?.map((vid, i: number) => <SideVideo video={vid} key={i} />);
 }

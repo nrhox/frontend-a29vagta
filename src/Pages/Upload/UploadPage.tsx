@@ -2,21 +2,34 @@ import { memo } from "react";
 import { Outlet } from "react-router-dom";
 import ButtonActive from "../../components/NavLinkCustom/ButtonActive";
 import { NameIndexPage, TabTitle } from "../../lib/Lib";
-import "./uploadpage.css";
+
+const menus = [
+  {
+    to: "/upload",
+    label: "Foto",
+  },
+  {
+    to: "/upload/video",
+    label: "Video",
+  },
+];
 
 function UploadPage() {
   TabTitle("Form | " + NameIndexPage);
   return (
     <div className="min-h-[85vh]">
-      <div className="flex justify-center my-4">
-        <div className="w-full sm:max-w-md max-w-[95%] md:max-w-lg p-5 px-7 bg-white bg-opacity-40 dark:bg-opacity-40 border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-          <div className="inline-flex rounded-md shadow-sm mb-5">
-            <ButtonActive to={"/upload"} className="nav-form nav-form-child px-4 py-2 text-sm font-medium">
-              Foto
-            </ButtonActive>
-            <ButtonActive to={"/upload/video"} className="nav-form nav-form-child px-4 py-2 text-sm font-medium">
-              Video
-            </ButtonActive>
+      <div className="my-4 flex justify-center">
+        <div className="bg-opacity-40 dark:bg-opacity-40 w-full max-w-[95%] border border-gray-200 bg-white p-5 px-7 shadow sm:max-w-md sm:p-6 md:max-w-lg md:p-8 dark:border-gray-700 dark:bg-gray-800">
+          <div className="mb-5 inline-flex overflow-hidden rounded-md shadow-sm">
+            {menus.map((menu, i) => (
+              <ButtonActive
+                to={menu.to}
+                key={i}
+                className="px-4 py-2 text-sm font-medium [.active]:bg-blue-500 [.active]:text-white [.active]:dark:bg-blue-500"
+              >
+                {menu.label}
+              </ButtonActive>
+            ))}
           </div>
           <Outlet />
         </div>

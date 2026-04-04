@@ -4,55 +4,87 @@ interface ErrorPageProps {
   ErrorCode?: number | string;
   message?: string;
   Redirect?: string;
-  callBack?: Function | (() => void);
+  callBack?: () => void;
   NullPath?: string;
 }
 
-export default function ErrorPage({ ErrorCode, message, Redirect = "/", callBack, NullPath }: ErrorPageProps) {
+export default function ErrorPage({
+  ErrorCode,
+  message,
+  Redirect = "/",
+  callBack,
+  NullPath,
+}: ErrorPageProps) {
   if (ErrorCode === 404 || ErrorCode === "404") {
     return (
-      <div className="h-[100vh] text-center flex flex-col justify-center" style={{ alignItems: "center" }}>
+      <div className="flex h-screen flex-col items-center justify-center text-center">
         <div>
-          <h1 className="inline-block m-0 mr-[20px] pr-[23px] text-[24px] font-[500] align-top leading-[49px] border-r-[1px] border-r-slate-400 dark:border-r-white dark:text-white" >{ErrorCode}</h1>
-          <div className="inline-block text-left leading-[49px] h-[49px] align-middle">
-            <h2 className="dark:text-white text-[20px] font-normal leading-[49px] m-0 p-0">{message ? message : "This page could not be found."} <span className="font-bold text-[18px]">{"ㄟ( ▔, ▔ )ㄏ"}</span></h2>
+          <h1 className="m-0 mr-5 inline-block border-r border-r-slate-400 pr-5.75 align-top text-[24px] leading-12.25 font-medium dark:border-r-white dark:text-white">
+            {ErrorCode}
+          </h1>
+          <div className="inline-block h-12.25 text-left align-middle leading-12.25">
+            <h2 className="m-0 p-0 text-[20px] leading-12.25 font-normal dark:text-white">
+              {message ? message : "This page could not be found."}{" "}
+              <span className="text-[18px] font-bold">{"ㄟ( ▔, ▔ )ㄏ"}</span>
+            </h2>
           </div>
           {NullPath ? (
-            <p className="text-[20px] font-normal leading-[25px] m-0 p-0">Route : <code className="font-mono bg-slate-300 p-1 text-gray-900 dark:text-gray-100 rounded-md font-[200] overflow-x-auto">{NullPath}</code></p>
+            <p className="m-0 p-0 text-[20px] leading-6.25 font-normal">
+              Route :{" "}
+              <code className="overflow-x-auto rounded-md bg-slate-300 p-1 font-mono font-extralight text-gray-900 dark:text-gray-100">
+                {NullPath}
+              </code>
+            </p>
           ) : null}
         </div>
         <div>
           {callBack ? (
-            <button onClick={() => callBack()} className="bg-blue-500 inline-block mx-2 px-4 my-3 py-2 ease-in-out duration-200 text-white rounded-md shadow-md hover:bg-blue-600 active:bg-blue-800">
+            <button
+              onClick={() => callBack()}
+              className="mx-2 my-3 inline-block rounded-md bg-blue-500 px-4 py-2 text-white shadow-md duration-200 ease-in-out hover:bg-blue-600 active:bg-blue-800"
+            >
               Refresh
             </button>
           ) : null}
-          <Link to={Redirect} className="bg-blue-500 inline-block mx-2 px-4 my-3 py-2 ease-in-out duration-200 text-white rounded-md shadow-md hover:bg-blue-600 active:bg-blue-800">
+          <Link
+            to={Redirect}
+            className="mx-2 my-3 inline-block rounded-md bg-blue-500 px-4 py-2 text-white shadow-md duration-200 ease-in-out hover:bg-blue-600 active:bg-blue-800"
+          >
             Kembali
           </Link>
         </div>
-      </div >
+      </div>
     );
   }
 
   return (
-    <div className="h-[100vh] text-center flex flex-col justify-center" style={{ alignItems: "center" }}>
+    <div className="flex h-screen flex-col items-center justify-center text-center">
       <div>
-        <h1 className="inline-block m-0 mr-[20px] pr-[23px] text-[24px] font-[500] align-top leading-[49px] border-r-[1px] border-r-slate-400 dark:border-r-white dark:text-white" >{ErrorCode}</h1>
-        <div className="inline-block text-left leading-[49px] h-[49px] align-middle">
-          <h2 className="text-[20px] font-normal leading-[49px] m-0 p-0 dark:text-white">{message} {"〜(￣▽￣〜)"}</h2>
+        <h1 className="m-0 mr-5 inline-block border-r border-r-slate-400 pr-5.75 align-top text-[24px] leading-12.25 font-medium dark:border-r-white dark:text-white">
+          {ErrorCode}
+        </h1>
+        <div className="inline-block h-12.25 text-left align-middle leading-12.25">
+          <h2 className="m-0 p-0 text-[20px] leading-12.25 font-normal dark:text-white">
+            {message} {"〜(￣▽￣〜)"}
+          </h2>
         </div>
       </div>
       <div>
         {callBack ? (
-          <button onClick={() => callBack()} className="bg-blue-500 inline-block mx-2 px-4 my-3 py-2 ease-in-out duration-200 text-white rounded-md shadow-md hover:bg-blue-600 active:bg-blue-800">
+          <button
+            onClick={() => callBack()}
+            className="mx-2 my-3 inline-block rounded-md bg-blue-500 px-4 py-2 text-white shadow-md duration-200 ease-in-out hover:bg-blue-600 active:bg-blue-800"
+          >
             Refresh
           </button>
         ) : null}
-        <Link to={Redirect} className="bg-blue-500 inline-block mx-2 px-4 my-3 py-2 ease-in-out duration-200 text-white rounded-md shadow-md hover:bg-blue-600 active:bg-blue-800">
+        <Link
+          to={Redirect}
+          className="mx-2 my-3 inline-block rounded-md bg-blue-500 px-4 py-2 text-white shadow-md duration-200 ease-in-out hover:bg-blue-600 active:bg-blue-800"
+        >
           Kembali
         </Link>
       </div>
-    </div >
+    </div>
   );
-} 
+}

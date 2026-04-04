@@ -11,7 +11,11 @@ export default function NavLinkCustom({ to, children, ...props }: NavProps) {
   const match = useMatch({ path: pathname, end: true });
 
   return (
-    <Link to={to} {...props} className={match ? `${props.className} active` : props.className}>
+    <Link
+      to={to}
+      {...props}
+      className={match ? `${props.className} active` : props.className}
+    >
       {children}
     </Link>
   );
