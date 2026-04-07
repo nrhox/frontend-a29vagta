@@ -52,7 +52,7 @@ export default function ModalImage({
       id="modal"
       tabIndex={-1}
       onClick={(e) => CLoseModalCallback(e)}
-      className={`bg-opacity-80 fixed inset-0 z-50 flex w-full items-center justify-center overflow-x-hidden overflow-y-auto bg-black p-4 transition duration-300 ease-in-out select-none md:h-full ${isShow ? "" : "opacity-0"}`}
+      className={`fixed inset-0 z-50 flex w-full items-center justify-center overflow-x-hidden overflow-y-auto bg-black/80 p-4 transition duration-300 ease-in-out select-none md:h-full ${isShow ? "" : "opacity-0"}`}
     >
       <div
         className={`relative max-w-md transition duration-300 ease-in-out lg:max-w-lg ${isShow ? "" : "translate-y-5"}`}

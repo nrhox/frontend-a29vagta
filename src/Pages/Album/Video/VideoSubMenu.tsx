@@ -4,10 +4,7 @@ import ErrorPage from "../../../components/ErrorPage/ErrorPage";
 import CardLink from "../../../components/card/CardLink";
 import { NameIndexPage, TabTitle } from "../../../lib/Lib";
 import { axiosInstance } from "../../../lib/axiosInstance";
-import type {
-  IResponsePagination,
-  ISuccessResponse,
-} from "../../../types/response";
+import type { IResponsePagination } from "../../../types/response";
 import type { IVideo } from "../../../types/vagta";
 
 export default function VideoSubMenu() {
@@ -16,14 +13,15 @@ export default function VideoSubMenu() {
   const { isLoading, isError, data, error } = useQuery({
     queryKey: ["memory_video"],
     queryFn: async () => {
-      const result = await axiosInstance.get<
-        ISuccessResponse<IResponsePagination<IVideo>>
-      >("/vagta/video", {
-        params: {
-          limit: 100,
+      const result = await axiosInstance.get<IResponsePagination<IVideo>>(
+        "/vagta/video",
+        {
+          params: {
+            limit: 100,
+          },
         },
-      });
-      return result.data.data.data;
+      );
+      return result.data.data;
     },
   });
 

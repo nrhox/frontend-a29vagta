@@ -53,7 +53,7 @@ function Card({
       <div {...props}>
         <div
           onContextMenu={(e) => centexHnadler(e)}
-          className="bg-opacity-40 dark:bg-opacity-40 relative mt-2 mb-3 flex flex-col border border-gray-200 bg-white font-sans md:my-4 md:max-w-sm md:rounded-lg md:rounded-t-lg md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800 md:dark:border-transparent md:dark:bg-transparent"
+          className="relative mt-2 mb-3 flex flex-col border border-gray-200 bg-white/80 font-sans md:my-4 md:max-w-sm md:rounded-lg md:rounded-t-lg md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800/80 md:dark:border-transparent md:dark:bg-transparent"
         >
           <LazyImage className="md:rounded-lg">
             <img

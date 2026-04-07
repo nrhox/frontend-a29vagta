@@ -2,10 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import AlertInfo from "../../components/Alert/AlertInfo";
 import { axiosInstance } from "../../lib/axiosInstance";
-import type {
-  IResponsePagination,
-  ISuccessResponse,
-} from "../../types/response";
+import type { IResponsePagination } from "../../types/response";
 import type { IImage } from "../../types/vagta";
 import CardHomeMobile from "./CardHomeMobile";
 import SkeletonPost from "./SkeletonPost";
@@ -14,14 +11,15 @@ export default function SectionPost() {
   const { isLoading, isError, data } = useQuery({
     queryKey: ["latest_post"],
     queryFn: async () => {
-      const result = await axiosInstance.get<
-        ISuccessResponse<IResponsePagination<IImage>>
-      >("/vagta/image", {
-        params: {
-          limit: 6,
+      const result = await axiosInstance.get<IResponsePagination<IImage>>(
+        "/vagta/image",
+        {
+          params: {
+            limit: 6,
+          },
         },
-      });
-      return result.data.data.data;
+      );
+      return result.data.data;
     },
   });
 

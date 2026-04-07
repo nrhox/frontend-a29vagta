@@ -6,10 +6,7 @@ import ErrorPage from "../../../components/ErrorPage/ErrorPage";
 import Card from "../../../components/card/Card";
 import { NameIndexPage, TabTitle } from "../../../lib/Lib";
 import { axiosInstance } from "../../../lib/axiosInstance";
-import type {
-  IResponsePagination,
-  ISuccessResponse,
-} from "../../../types/response";
+import type { IResponsePagination } from "../../../types/response";
 import type { IImage } from "../../../types/vagta";
 
 const handleScrollToSelectID = (idElement: string) => {
@@ -32,14 +29,15 @@ export default function FotoSubmenu() {
   const { isLoading, isError, data, error } = useQuery({
     queryKey: ["memory_images"],
     queryFn: async () => {
-      const result = await axiosInstance.get<
-        ISuccessResponse<IResponsePagination<IImage>>
-      >("/vagta/image", {
-        params: {
-          limit: 100,
+      const result = await axiosInstance.get<IResponsePagination<IImage>>(
+        "/vagta/image",
+        {
+          params: {
+            limit: 100,
+          },
         },
-      });
-      return result.data.data.data;
+      );
+      return result.data.data;
     },
   });
 

@@ -178,7 +178,7 @@ function Document() {
 
             <div className="relative max-w-95 overflow-x-auto rounded-xl border border-gray-500 shadow-md md:max-w-screen-sm dark:border-gray-600 dark:text-white">
               <table className="w-full table-auto text-left text-sm text-gray-900 dark:text-white">
-                <thead className="bg-opacity-70 border-b border-gray-500 bg-gray-50 text-xs text-gray-900 uppercase dark:bg-gray-700 dark:text-white">
+                <thead className="border-b border-gray-500/70 bg-gray-50 text-xs text-gray-900 uppercase dark:bg-gray-700/70 dark:text-white">
                   <tr>
                     <th scope="col" className="px-6 py-3">
                       Icon
@@ -189,7 +189,7 @@ function Document() {
                   </tr>
                 </thead>
                 <tbody className="capitalize">
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeEagle className="h-9 w-9" />
                     </th>
@@ -197,7 +197,7 @@ function Document() {
                       Siswa
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeFlower className="h-9 w-9" />
                     </th>
@@ -205,7 +205,7 @@ function Document() {
                       siswi
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeChairman className="h-9 w-9" />
                     </th>
@@ -213,7 +213,7 @@ function Document() {
                       Ketua kelas
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeViceChairman className="h-9 w-9" />
                     </th>
@@ -221,7 +221,7 @@ function Document() {
                       Wakil Ketua kelas
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeOsis className="h-9 w-9" />
                     </th>
@@ -229,7 +229,7 @@ function Document() {
                       anggota Osis
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeSekretaris className="h-9 w-9" />
                     </th>
@@ -237,7 +237,7 @@ function Document() {
                       sekretaris
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeBendahara className="h-9 w-9" />
                     </th>
@@ -245,7 +245,7 @@ function Document() {
                       Bendahara
                     </td>
                   </tr>
-                  <tr className="bg-opacity-70 dark:bg-opacity-70 border-b border-gray-500 bg-white dark:border-gray-700 dark:bg-gray-900">
+                  <tr className="border-b border-gray-500 bg-white/70 dark:border-gray-700 dark:bg-gray-900/70">
                     <th scope="row" className="px-6 py-2">
                       <BadgeDevTeam className="h-9 w-9" />
                     </th>

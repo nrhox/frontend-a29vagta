@@ -70,7 +70,7 @@ export default function ModalCard({
       <div
         id="modal"
         tabIndex={-1}
-        className={`fixed inset-0 z-50 flex w-full items-center justify-center overflow-x-hidden overflow-y-auto bg-black p-4 transition duration-200 ease-in-out md:h-full ${isShow ? "bg-opacity-60" : "bg-opacity-0 opacity-0"}`}
+        className={`fixed inset-0 z-50 flex w-full items-center justify-center overflow-x-hidden overflow-y-auto p-4 transition duration-200 ease-in-out md:h-full ${isShow ? "bg-black/60" : "bg-black/0 opacity-0"}`}
       >
         <div className="relative h-auto w-full max-w-md lg:max-w-lg">
           <div

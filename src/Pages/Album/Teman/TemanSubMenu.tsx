@@ -14,10 +14,7 @@ import {
 } from "../../../lib/AssetIcon/IconCustom";
 import { axiosInstance } from "../../../lib/axiosInstance";
 import { NameIndexPage, TabTitle } from "../../../lib/Lib";
-import type {
-  IResponsePagination,
-  ISuccessResponse,
-} from "../../../types/response";
+import type { IResponsePagination } from "../../../types/response";
 import type { IFriend } from "../../../types/vagta";
 
 interface CardTemanProps {
@@ -82,7 +79,7 @@ function CardTeman({ data, ...props }: CardTemanProps) {
   return (
     <div
       {...props}
-      className="bg-opacity-40 dark:bg-opacity-40 w-full max-w-full rounded-lg border border-gray-200 bg-white p-4 px-5 capitalize shadow sm:p-6 dark:border-gray-700 dark:bg-gray-800"
+      className="w-full max-w-full rounded-lg border border-gray-200 bg-white/40 p-4 px-5 capitalize shadow sm:p-6 dark:border-gray-700 dark:bg-gray-800/40"
     >
       <h5 className="mb-4 flex items-center align-middle text-lg font-bold text-gray-900 md:text-xl dark:text-gray-200">
         presensi {data.serial} {modifiedSentence}
@@ -108,14 +105,15 @@ export default function TemanSubMenu() {
   const { isLoading, isError, data, error } = useQuery({
     queryKey: ["memory_friend"],
     queryFn: async () => {
-      const result = await axiosInstance.get<
-        ISuccessResponse<IResponsePagination<IFriend>>
-      >("/vagta/friend", {
-        params: {
-          limit: 100,
+      const result = await axiosInstance.get<IResponsePagination<IFriend>>(
+        "/vagta/friend",
+        {
+          params: {
+            limit: 100,
+          },
         },
-      });
-      return result.data.data.data;
+      );
+      return result.data.data;
     },
   });
 

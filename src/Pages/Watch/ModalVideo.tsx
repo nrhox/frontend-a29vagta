@@ -77,7 +77,7 @@ export default function ModalVideo({
         id="backdrop"
         onClick={(e) => handlerClose(e)}
         tabIndex={-1}
-        className={`bg-opacity-70 fixed inset-0 z-50 flex w-full items-center justify-center overflow-x-hidden overflow-y-auto bg-black p-4 transition duration-200 ease-in-out md:h-full ${isShow ? "opacity-100" : "opacity-0"}`}
+        className={`fixed inset-0 z-50 flex w-full items-center justify-center overflow-x-hidden overflow-y-auto bg-black/70 p-4 transition duration-200 ease-in-out md:h-full ${isShow ? "opacity-100" : "opacity-0"}`}
       >
         <div className="relative h-auto w-full max-w-md">
           <div

@@ -29,7 +29,7 @@ export default function ReadyVideo({ data }: { data: IVideo }) {
           >
             <source src={data.video_url}></source>
           </video>
-          <div className="dark:bg-opacity-20 bg-opacity-40 bg-white px-4 pt-2 pb-4 md:bg-transparent md:px-0 md:pt-2 md:pb-5 dark:bg-gray-700 md:dark:bg-transparent">
+          <div className="bg-white/40 px-4 pt-2 pb-4 md:bg-transparent md:px-0 md:pt-2 md:pb-5 dark:bg-gray-700/20 md:dark:bg-transparent">
             <h5 className="mb-1 font-sans text-lg font-semibold tracking-normal text-gray-900 sm:text-xl md:text-2xl dark:text-white">
               {data.title}
             </h5>
@@ -40,7 +40,7 @@ export default function ReadyVideo({ data }: { data: IVideo }) {
                   <a
                     href={data.video_original_url}
                     target="_blank"
-                    className="dark:bg-opacity-50 dark:hover:bg-opacity-50 rounded-l-lg border-2 border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-900 transition duration-200 ease-in-out hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-blue-400 dark:focus:text-white dark:focus:ring-blue-500"
+                    className="rounded-l-lg border-2 border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-900 transition duration-200 ease-in-out hover:bg-gray-100/50 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700/50 dark:text-white dark:hover:bg-gray-600 dark:hover:text-blue-400 dark:focus:text-white dark:focus:ring-blue-500"
                     rel="noreferrer"
                   >
                     <svg
@@ -62,7 +62,7 @@ export default function ReadyVideo({ data }: { data: IVideo }) {
                   <a
                     href={data.video_download_url}
                     target="_blank"
-                    className="dark:bg-opacity-50 dark:hover:bg-opacity-50 border-t-2 border-b-2 border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-900 transition duration-200 ease-in-out hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-blue-400 dark:focus:text-white dark:focus:ring-blue-500"
+                    className="border-t-2 border-b-2 border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-900 transition duration-200 ease-in-out hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700/50 dark:text-white dark:hover:bg-gray-600/50 dark:hover:text-blue-400 dark:focus:text-white dark:focus:ring-blue-500"
                     rel="noreferrer"
                   >
                     <svg
@@ -84,7 +84,7 @@ export default function ReadyVideo({ data }: { data: IVideo }) {
                   <button
                     onClick={() => ShareButton()}
                     type="button"
-                    className="dark:bg-opacity-50 dark:hover:bg-opacity-50 rounded-r-md border-2 border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-900 transition duration-200 ease-in-out hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600 dark:hover:text-blue-400 dark:focus:text-white dark:focus:ring-blue-500"
+                    className="rounded-r-md border-2 border-gray-300 bg-white px-3 py-1 text-sm font-medium text-gray-900 transition duration-200 ease-in-out hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:ring-2 focus:ring-blue-700 dark:border-gray-600 dark:bg-gray-700/50 dark:text-white dark:hover:bg-gray-600/50 dark:hover:text-blue-400 dark:focus:text-white dark:focus:ring-blue-500"
                   >
                     <svg
                       className="h-5 w-5 md:h-6 md:w-6"

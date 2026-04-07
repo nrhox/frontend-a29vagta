@@ -66,7 +66,7 @@ export default function Postings() {
     <>
       <div className="flex justify-center md:mx-10">
         <div className="min-w-full md:mt-10 md:min-w-[40%] lg:max-w-[40%]">
-          <div className="bg-opacity-40 dark:bg-opacity-40 flex min-h-[80vh] flex-col border border-gray-200 bg-white font-sans md:min-h-screen md:rounded-lg md:rounded-t-lg md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800 md:dark:border-transparent md:dark:bg-transparent">
+          <div className="flex min-h-[80vh] flex-col border border-gray-200 bg-white/40 font-sans md:min-h-screen md:rounded-lg md:rounded-t-lg md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800/40 md:dark:border-transparent md:dark:bg-transparent">
             <LazyImage className="md:rounded-lg">
               <img
                 className="md:rounded-lg"

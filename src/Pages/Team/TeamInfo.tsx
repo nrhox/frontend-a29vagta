@@ -39,7 +39,7 @@ export default function TeamInfo() {
               <BrandTitle2 /> dikelola oleh tim pendiri dan sekelompok kecil
               kontributor.
             </p>
-            <ul className="bg-opacity-70 mb-4 w-[90%] rounded-lg border border-gray-500 bg-white text-base font-medium text-gray-900 sm:w-[70%] dark:border-gray-600 dark:bg-gray-700 dark:text-white">
+            <ul className="mb-4 w-[90%] rounded-lg border border-gray-500 bg-white/70 text-base font-medium text-gray-900 sm:w-[70%] dark:border-gray-600 dark:bg-gray-700/70 dark:text-white">
               {teams.map((team, i: number) => {
                 return (
                   <a

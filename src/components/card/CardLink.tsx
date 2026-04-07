@@ -34,7 +34,7 @@ function CardLink({
     <div {...props}>
       <div
         onClick={(e) => handlerClick(e)}
-        className="bg-opacity-40 dark:bg-opacity-40 relative mb-3 flex flex-col border border-gray-200 bg-white font-sans transition-all duration-150 select-none active:opacity-80 md:my-4 md:max-w-sm md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800 md:dark:border-transparent md:dark:bg-transparent"
+        className="relative mb-3 flex flex-col border border-gray-200 bg-white/40 font-sans transition-all duration-150 select-none active:opacity-80 md:my-4 md:max-w-sm md:border-transparent md:bg-transparent dark:border-gray-700 dark:bg-gray-800/40 md:dark:border-transparent md:dark:bg-transparent"
       >
         <LazyImage className="md:rounded-lg">
           <img
