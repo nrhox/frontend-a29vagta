@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom"; // Gunakan useNavigate untuk nav
 import * as yup from "yup";
 import Input from "../../../components/Base/Input";
 import Textarea from "../../../components/Base/Textarea";
-import { axiosInstance } from "../../../lib/axiosInstance";
 import {
   DRIVE_URL_STRING_REGEX,
   NameIndexPage,
@@ -15,6 +14,7 @@ import {
 } from "../../../lib/Lib";
 import type { IErrorResponse, ISuccessResponse } from "../../../types/response";
 import type { IVideo } from "../../../types/vagta";
+import axiosInstance from "../../../lib/axiosInstance";
 
 const uploadVideoSchema = yup.object({
   vid_link: yup

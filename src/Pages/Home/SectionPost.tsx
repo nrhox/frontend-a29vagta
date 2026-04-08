@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "motion/react";
 import AlertInfo from "../../components/Alert/AlertInfo";
-import { axiosInstance } from "../../lib/axiosInstance";
 import type { IResponsePagination } from "../../types/response";
 import type { IImage } from "../../types/vagta";
 import CardHomeMobile from "./CardHomeMobile";
 import SkeletonPost from "./SkeletonPost";
+import axiosInstance from "../../lib/axiosInstance";
 
 export default function SectionPost() {
   const { isLoading, isError, data } = useQuery({

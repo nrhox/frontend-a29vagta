@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import Input from "../../../components/Base/Input";
 import Textarea from "../../../components/Base/Textarea";
+import axiosInstance from "../../../lib/axiosInstance";
 import {
   DRIVE_URL_STRING_REGEX,
   NameIndexPage,
   TabTitle,
 } from "../../../lib/Lib";
-import { axiosInstance } from "../../../lib/axiosInstance";
 import type { IErrorResponse, ISuccessResponse } from "../../../types/response";
 import type { IImage } from "../../../types/vagta";
 

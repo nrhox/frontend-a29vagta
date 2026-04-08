@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { memo, useEffect } from "react";
 import { redirect, useSearchParams } from "react-router-dom";
 import { LoadingSpiner } from "../../components/Base/Loading";
-import { axiosInstance } from "../../lib/axiosInstance";
+import axiosInstance from "../../lib/axiosInstance";
 import { NameIndexPage, TabTitle, metaDescription } from "../../lib/Lib";
 import type { ISuccessResponse } from "../../types/response";
 import type { IVideo } from "../../types/vagta";

@@ -1,5 +1,6 @@
-import { useQuery } from "@tanstack/react-query";
-import { Fragment, ReactNode } from "react";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { Fragment, ReactNode, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import { LoadingSpiner } from "../../../components/Base/Loading";
 import ErrorPage from "../../../components/ErrorPage/ErrorPage";
 import {
@@ -12,10 +13,10 @@ import {
   BadgeSekretaris,
   BadgeViceChairman,
 } from "../../../lib/AssetIcon/IconCustom";
-import { axiosInstance } from "../../../lib/axiosInstance";
 import { NameIndexPage, TabTitle } from "../../../lib/Lib";
 import type { IResponsePagination } from "../../../types/response";
 import type { IFriend } from "../../../types/vagta";
+import axiosInstance from "../../../lib/axiosInstance";
 
 interface CardTemanProps {
   data: IFriend;
@@ -102,35 +103,69 @@ function CardTeman({ data, ...props }: CardTemanProps) {
 
 export default function TemanSubMenu() {
   TabTitle("Presensi | Album | " + NameIndexPage);
-  const { isLoading, isError, data, error } = useQuery({
+
+  const { ref, inView } = useInView();
+
+  const {
+    isLoading,
+    isError,
+    data,
+    error,
+    hasNextPage,
+    fetchNextPage,
+    isFetchingNextPage,
+  } = useInfiniteQuery({
     queryKey: ["memory_friend"],
-    queryFn: async () => {
+    queryFn: async ({ pageParam = null }: { pageParam: string | null }) => {
       const result = await axiosInstance.get<IResponsePagination<IFriend>>(
         "/vagta/friend",
         {
           params: {
-            limit: 100,
+            limit: 10,
+            next: pageParam,
           },
         },
       );
-      return result.data.data;
+      return result.data;
     },
+    initialPageParam: null as string | null,
+    getNextPageParam: (lastPage) => lastPage.meta.nextCursor ?? null,
   });
+
+  useEffect(() => {
+    if (inView && hasNextPage) {
+      fetchNextPage();
+    }
+  }, [fetchNextPage, hasNextPage, inView]);
+
+  if (isLoading && !isError && isFetchingNextPage) {
+    return <LoadingSpiner />;
+  }
+
+  if (isError) {
+    return <ErrorPage message={error.message} ErrorCode={400} />;
+  }
 
   return (
     <>
-      {isLoading ? (
-        <LoadingSpiner />
-      ) : isError ? (
-        <ErrorPage message={error.message} ErrorCode={400} />
-      ) : (
-        <div className="container">
-          <div className="mb-12 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:mb-16 lg:grid-cols-4">
-            {data?.map((friend, i) => (
-              <CardTeman data={friend} key={i} />
-            ))}
+      {data !== undefined && (
+        <>
+          <div className="container">
+            <div className="mb-12 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:mb-16 lg:grid-cols-4">
+              {data.pages.map((group, i) => (
+                <Fragment key={i}>
+                  {group.data.map((friend, i) => (
+                    <CardTeman data={friend} key={i} />
+                  ))}
+                </Fragment>
+              ))}
+            </div>
+            {hasNextPage && (
+              <div ref={ref} className="h-0 w-full bg-transparent"></div>
+            )}
+            {isFetchingNextPage && <LoadingSpiner />}
           </div>
-        </div>
+        </>
       )}
     </>
   );

@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { LoadingSpiner } from "../../components/Base/Loading";
-import { axiosInstance } from "../../lib/axiosInstance";
 import type { IResponsePagination } from "../../types/response";
 import type { IVideo } from "../../types/vagta";
 import SideVideo from "./SideVideo";
+import axiosInstance from "../../lib/axiosInstance";
 
 export default function AllVideo({ id }: { id: string }) {
   const { isLoading, isError, data } = useQuery({

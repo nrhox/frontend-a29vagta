@@ -11,9 +11,9 @@ import {
   TabTitle,
   timeSince,
 } from "../../lib/Lib";
-import { axiosInstance } from "../../lib/axiosInstance";
 import type { ISuccessResponse } from "../../types/response";
 import type { IImage } from "../../types/vagta";
+import axiosInstance from "../../lib/axiosInstance";
 
 export default function Postings() {
   const [GetSubString, SetSubString] = useState(false);
