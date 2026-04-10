@@ -1,15 +1,3 @@
-type tLib = {
-  apiPoint: string;
-  keyData: string;
-  origin: string;
-};
-
-export const lib: tLib = {
-  apiPoint: "https://backend-a29vagta.vercel.app/api/",
-  keyData: "EzL8m8zkUW_XsGNTjm24pEJu6akCy_cUp8GvGWvlTHdeqHoUDr9O8pLtB_q0",
-  origin: window.location.origin,
-};
-
 export function timeSince(date: string | number | Date) {
   const newDate = new Date(date);
 
