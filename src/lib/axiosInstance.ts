@@ -17,7 +17,7 @@ export const initClientIP = async () => {
 };
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.PROD
+  baseURL: import.meta.env.VITE_PRODUCTION
     ? (import.meta.env.VITE_BACKEND_URL as string | undefined) ||
       "http://localhost:3030"
     : "http://localhost:3030",
